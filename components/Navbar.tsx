@@ -3,7 +3,7 @@ import { ToggleTheme } from "./toggle-theme";
 
 const Navbar = () => {
   return (
-    <nav className="flex items-center max-w-3xl w-full mx-auto justify-between border-b-2 p-4 lg:px-0">
+    <nav className="flex items-center max-w-3xl w-full mx-auto justify-between border-b-2 p-4 lg:px-0 sticky top-0 bg-background">
       <div className="flex gap-4">
         <Link className="hover:underline" href="/">
           Home
