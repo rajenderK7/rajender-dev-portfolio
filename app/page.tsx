@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-center lg:mt-14">
-      <section className="max-w-3xl w-full">
+      <section className="">
         <h2 className="text-2xl  mb-2 text-slate-600 dark:text-slate-300">
           Hi there, I'm
         </h2>
