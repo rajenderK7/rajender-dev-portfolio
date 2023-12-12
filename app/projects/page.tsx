@@ -7,7 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { client } from "@/lib/sanity/client";
+import { sanityClient } from "@/lib/sanity/client";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -25,20 +25,16 @@ interface ProjectI {
 }
 
 const Project = ({
-  _id,
-  author,
   description,
   imgURL,
   title,
-  updatedAt,
   github,
   liveSite,
 }: ProjectI) => {
   return (
-    <Card className="my-4">
+    <Card className="m-4 lg:mx-0">
       <CardHeader>
         <CardTitle>{title}</CardTitle>
-        <CardDescription>{author}</CardDescription>
         <div className="flex justify-center max-h-64">
           <Image src={imgURL} alt={title} height={300} width={400} />
         </div>
@@ -60,7 +56,7 @@ const Project = ({
 
 const Projects = async () => {
   const projects: ProjectI[] =
-    await client.fetch(`*[_type=="project" && !(_id in path("drafts.**"))] | order(publishedAt desc) {
+    await sanityClient.fetch(`*[_type=="project" && !(_id in path("drafts.**"))] | order(publishedAt desc) {
         _id,
         _updatedAt,
         "author": author -> name,
