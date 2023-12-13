@@ -24,7 +24,7 @@ const Skills = () => {
           );
         })}
       </div>
-      <div className="mt-2">
+      <div className="mt-2 -mb-2">
         {tech.map((t, i) => {
           return (
             <Badge
@@ -37,15 +37,6 @@ const Skills = () => {
           );
         })}
       </div>
-      {/* <div className="mt-2">
-        {dbs.map((d, i) => {
-          return (
-            <Badge key={i} variant={"outline"} className={style}>
-              {d}
-            </Badge>
-          );
-        })}
-      </div> */}
     </div>
   );
 };
