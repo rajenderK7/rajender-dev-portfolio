@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
@@ -18,7 +17,7 @@ interface ProjectI {
   slug?: string;
   author: string;
   description: any;
-  liveSite?: string;
+  liveSite: string;
   github: string;
   updatedAt: Date;
   imgURL: string;
@@ -33,22 +32,24 @@ const Project = ({
 }: ProjectI) => {
   return (
     <Card className="m-4 lg:mx-0">
-      <CardHeader>
-        <CardTitle>{title}</CardTitle>
+      <CardHeader className="pb-4">
+        <CardTitle className="mb-2">{title}</CardTitle>
         <div className="flex justify-center max-h-64">
           <Image src={imgURL} alt={title} height={300} width={400} />
         </div>
       </CardHeader>
-      <CardContent className="text-sm py-2">
+      <CardContent className="text-sm pb-3">
         <p>{description}</p>
       </CardContent>
       <CardFooter className="text-sm gap-4 justify-end">
         <Button size="sm">
           <Link href={github}>GitHub</Link>
         </Button>
-        <Button size="sm">
-          <Link href={liveSite ?? github}>Live</Link>
-        </Button>
+        {liveSite?.length > 0 && (
+          <Button size="sm">
+            <Link href={liveSite}>Live</Link>
+          </Button>
+        )}
       </CardFooter>
     </Card>
   );

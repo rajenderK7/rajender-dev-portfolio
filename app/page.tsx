@@ -31,7 +31,7 @@ export default function Home() {
         <Connect />
         <Skills />
         <Experience />
-        {/* Recent Posts */}
+        {/* TODO: Recent Posts */}
       </section>
     </main>
   );
