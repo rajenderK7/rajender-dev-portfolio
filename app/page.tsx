@@ -8,7 +8,7 @@ export default function Home() {
     <main className="flex flex-col items-center justify-center p-4 lg:p-0 lg:mt-14">
       <section className="">
         <h2 className="text-2xl  mb-2 text-slate-600 dark:text-slate-300">
-          Hi there, I'm
+          {`Hi there, I'm`}
         </h2>
         <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl">
           Rajender Katkuri
