@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center p-4 lg:p-0 lg:mt-14">
+    <main className="flex flex-col items-center justify-center p-4 lg:p-0 lg:mt-8">
       <section className="">
         <h2 className="text-2xl  mb-2 text-slate-600 dark:text-slate-300">
           {`Hi there, I'm`}

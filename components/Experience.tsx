@@ -10,6 +10,12 @@ export interface ExperienceI {
 // Any new experience entry shall be added at the beginning of the list
 const experience: ExperienceI[] = [
   {
+    duration: "January 2024 - Present",
+    titleAndOrg: "Technical Intern @ F5 Networks",
+    desc: "Working with React on the frontend and Go on the backend.",
+    location: "Hyderabad, IN",
+  },
+  {
     duration: "February 2022 - June 2022",
     titleAndOrg: "Flutter Developer Intern @ Fosterate",
     desc: "Implemented user on-boarding and developed part of the merchant application using Flutter and Firebase.",
